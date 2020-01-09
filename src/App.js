@@ -40,7 +40,7 @@ class App extends React.Component
 
   setSelectedItem = (query) => {
       this.setState({ loading: true });
-      axios.get("https://agile-beyond-52653.herokuapp.com/api/list/?query="+query)
+      axios.get("https://agile-beyond-52653.herokuapp.com/api/list?query="+query)
       .then(res => {
           this.setState({
               data: res.data.response.groups[0].items
